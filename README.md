@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/alhasanmridha/googletest-example.svg?branch=master)](https://travis-ci.org/alhasanmridha/googletest-example)
 # googletest-example
-A hello world example for googletest framework.
+A hello world example for googletest framework. Project is created according to [this](https://raymii.org/s/tutorials/Cpp_project_setup_with_cmake_and_unit_tests.html) awsome tutorial. 
 ## Build
 Clone the source code
 ```bash
