@@ -1,24 +1,15 @@
+dist: trusty
 sudo: false
 
-language:
-  - cpp
-
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
+language: cpp
 
 before_install:
-  - pip install --user cpp-coveralls
+  - git submodule init
+  - git submodule update
 
 script:
-  - mkdir build
-  - cd build
-  - cmake ..
-  - cmake --build .
-
-after_success:
-  - coveralls --root .. -E ".*external.*" -E ".*CMakeFiles.*" -E ".*test/.*.cpp.*"
+  - cmake -H. -Bbuild
+  - cmake --build build
 
 notifications:
   email: false
